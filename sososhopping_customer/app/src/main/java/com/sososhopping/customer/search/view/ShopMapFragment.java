@@ -365,9 +365,16 @@ public class ShopMapFragment extends Fragment implements OnMapReadyCallback {
         //특징설정
         if(!s.isLocalCurrencyStatus()){
             binding.itemSearchMap.layoutLocalPay.setVisibility(View.GONE);
+        }else{
+
+            binding.itemSearchMap.layoutLocalPay.setVisibility(View.VISIBLE);
         }
+
         if(!s.isDeliveryStatus()){
             binding.itemSearchMap.layoutDelivery.setVisibility(View.GONE);
+        }
+        else{
+            binding.itemSearchMap.layoutDelivery.setVisibility(View.VISIBLE);
         }
 
         //별점설정
