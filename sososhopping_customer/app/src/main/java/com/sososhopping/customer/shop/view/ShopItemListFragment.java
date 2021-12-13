@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
+import androidx.navigation.NavOptions;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -91,7 +92,8 @@ public class ShopItemListFragment extends Fragment {
         binding.buttonToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((HomeActivity) getActivity()).getBinding().bottomNavigation.setSelectedItemId(R.id.menu_cart);
+                ((HomeActivity)getActivity()).getBinding().bottomNavigation.getMenu().findItem(R.id.menu_cart).setChecked(true);
+                NavHostFragment.findNavController(getParentFragment().getParentFragment()).navigate(R.id.cartMainFragment, null, new NavOptions.Builder().setPopUpTo(R.id.nav_graph, true).build());
             }
         });
     }
