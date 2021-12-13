@@ -1,0 +1,27 @@
+<resources>
+
+    <dimen name="long_button">350dp</dimen>
+
+    <dimen name="padding_Left">20dp</dimen>
+    <dimen name="padding_Top">10dp</dimen>
+
+    <dimen name="default_toolbar">51dp</dimen>
+    <dimen name="default_toolbar_textSize">18sp</dimen>
+
+    <dimen name="search_shop_description">12sp</dimen>
+
+    <!--for carousel-->
+    <dimen name="viewpager_frameSize">320dp</dimen>
+
+    <!--padding-->
+
+    <!--forText-->
+    <dimen name="normal_minus">12sp</dimen>
+    <dimen name="normal">14sp</dimen>
+    <dimen name="normal_plus">16sp</dimen>
+    <dimen name="large_minus">20sp</dimen>
+    <dimen name="large_little">18sp</dimen>
+    <dimen name="large">22sp</dimen>
+
+    <dimen name="large_plus">24sp</dimen>
+</resources>

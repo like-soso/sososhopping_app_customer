@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--네트워크 에러-->
+    <string name="network_error_title">서버 연결 오류</string>
+    <string name="network_error_description">서버와 연결이 원활하지 않습니다.\n인터넷 연결 상태를 확인하고 잠시 후 다시 시도해주세요.</string>
+    <string name="network_error_ok">확인</string>
+
+    <!--로그인에러-->
+    <string name="login_error_description">로그인이 필요한 작업입니다. \n로그인 화면으로 이동하시겠습니까?</string>
+    <string name="login_error_token">로그인 상태 오류입니다. \n다시 로그인해 주세요</string>
+    <string name="login_error_ok">로그인하기</string>
+
+
+    <!--범용 에러-->
+    <string name="shop_error">정보를 불러오는데 실패했습니다</string>
+    <string name="requireLogIn">로그인 후 이용해주세요</string>
+
+    <!--고객센터-->
+    <string name="service_title">고객센터</string>
+    <string name="service_owner">개발, 운영 : 소소하게</string>
+    <string name="service_description">어플리케이션의 사용 중 발생한 불편함이나\n기타 문의사항은 고객센터 이메일\n(sososhop2021@gmail.com)로 문의 부탁드립니다.</string>
+
+</resources>

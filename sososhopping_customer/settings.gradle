@@ -1,0 +1,2 @@
+rootProject.name = "sososhopping_customer"
+include ':app'

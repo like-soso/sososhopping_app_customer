@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_login_graph"
+    app:startDestination="@id/signUpStartFragment">
+
+    <fragment
+        android:id="@+id/findPasswordFragment"
+        android:name="com.sososhopping.customer.account.view.FindPasswordFragment"
+        android:label="account_find_password"
+        tools:layout="@layout/account_find_password">
+        <action
+            android:id="@+id/action_findPasswordFragment_to_signUpStartFragment"
+            app:destination="@id/signUpStartFragment"
+            app:popUpTo="@id/signUpStartFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpIdFragment"
+        android:name="com.sososhopping.customer.account.view.SignUpEmailFragment"
+        android:label="account_sign_up_email_id"
+        tools:layout="@layout/account_sign_up_email">
+        <action
+            android:id="@+id/action_signUpIdFragment_to_signUpInfoFragment"
+            app:destination="@id/signUpInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpStartFragment"
+        android:name="com.sososhopping.customer.account.view.SignUpStartFragment"
+        android:label="account_sign_up_start"
+        tools:layout="@layout/account_sign_up_start">
+        <action
+            android:id="@+id/action_signUpStartFragment_to_signUpIdFragment"
+            app:destination="@id/signUpIdFragment"
+            app:popUpTo="@id/signUpStartFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_signUpStartFragment_to_logInDialogFragment"
+            app:destination="@id/logInDialogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/findEmailFragment"
+        android:name="com.sososhopping.customer.account.view.FindEmailFragment"
+        android:label="account_find_email"
+        tools:layout="@layout/account_find_email">
+        <action
+            android:id="@+id/action_findEmailFragment_to_signUpStartFragment"
+            app:destination="@id/signUpStartFragment"
+            app:popUpTo="@id/signUpStartFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <dialog
+        android:id="@+id/logInDialogFragment"
+        android:name="com.sososhopping.customer.account.view.LogInDialogFragment"
+        android:label="LogInDialogFragment"
+        tools:layout="@layout/account_log_in_dialog">
+        <action
+            android:id="@+id/action_logInDialogFragment_to_findEmailFragment"
+            app:destination="@id/findEmailFragment" />
+        <action
+            android:id="@+id/action_logInDialogFragment_to_findPasswordFragment"
+            app:destination="@id/findPasswordFragment"
+            app:popUpTo="@id/logInDialogFragment"
+            app:popUpToInclusive="true" />
+    </dialog>
+    <fragment
+        android:id="@+id/signUpInfoFragment"
+        android:name="com.sososhopping.customer.account.view.SignUpInfoFragment"
+        android:label="account_sign_up_info"
+        tools:layout="@layout/account_sign_up_info">
+        <action
+            android:id="@+id/action_signUpInfoFragment_to_signUpStartFragment"
+            app:destination="@id/signUpStartFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/signUpStartFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+</navigation>

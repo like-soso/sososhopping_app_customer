@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_check_circle_240"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:text="@string/order_success"
+        android:textStyle="bold"
+        android:textSize="@dimen/large_plus" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_shop"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawableLeft="@drawable/ic_baseline_store_24"
+            android:minWidth="0dp"
+            android:minHeight="48dp"
+            android:padding="0dp"
+            android:text="@string/order_store"
+            android:textColor="@color/text_400"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_myPurchase"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawableLeft="@drawable/ic_baseline_list_alt_24"
+            android:minWidth="0dp"
+            android:minHeight="48dp"
+            android:padding="0dp"
+            android:text="@string/order_myPurchase"
+            android:textColor="@color/text_400"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/button_cart"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:drawableLeft="@drawable/ic_baseline_shopping_cart_24"
+            android:minWidth="0dp"
+            android:minHeight="48dp"
+            android:padding="0dp"
+            android:text="@string/order_cart"
+            android:textColor="@color/text_400"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="20dp"
+        android:textSize="@dimen/normal"
+        android:text="@string/order_success_comment" />
+
+    <Button
+        android:layout_margin="40dp"
+        android:paddingRight="30dp"
+        android:paddingLeft="30dp"
+        android:id="@+id/button_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/normal"
+        android:text="확인" />
+
+
+</LinearLayout>

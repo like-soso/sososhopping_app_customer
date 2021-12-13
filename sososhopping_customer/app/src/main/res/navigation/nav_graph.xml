@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.sososhopping.customer.search.view.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/home" >
+        <action
+            android:id="@+id/action_home2_to_shopListFragment"
+            app:destination="@id/shopListFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_home2_to_shopMapFragment"
+            app:destination="@id/shopMapFragment" />
+        <action
+            android:id="@+id/action_home2_to_searchDialogFragment2"
+            app:destination="@id/searchDialogFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/interestShopListFragment"
+        android:name="com.sososhopping.customer.interest.view.InterestShopListFragment"
+        android:label="FavoriteShopListFragment"
+        tools:layout="@layout/interest_shop_list">
+        <action
+            android:id="@+id/action_interestShopListFragment_to_shop_graph"
+            app:destination="@id/shop_graph" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/shopListFragment"
+        android:name="com.sososhopping.customer.search.view.ShopListFragment"
+        android:label="search_shop_list"
+        tools:layout="@layout/search_shop_list">
+        <action
+            android:id="@+id/action_shopListFragment_to_searchDialogFragment"
+            app:destination="@id/searchDialogFragment" />
+        <action
+            android:id="@+id/action_shopListFragment_to_shopMapFragment"
+            app:destination="@id/shopMapFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/shopListFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_shopListFragment_to_shop_graph"
+            app:destination="@id/shop_graph"
+            app:popUpTo="@id/shopListFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/shopMapFragment"
+        android:name="com.sososhopping.customer.search.view.ShopMapFragment"
+        android:label="ShopMapFragment"
+        tools:layout="@layout/search_shop_map">
+        <action
+            android:id="@+id/action_shopMapFragment_to_searchDialogFragment"
+            app:destination="@id/searchDialogFragment" />
+        <argument
+            android:name="lat"
+            app:argType="float"
+            android:defaultValue="37.583912" />
+        <argument
+            android:name="lng"
+            app:argType="float"
+            android:defaultValue="127.058981" />
+        <argument
+            android:name="navigateFrom"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_shopMapFragment_to_searchDialogFragment2"
+            app:destination="@id/searchDialogFragment" />
+        <action
+            android:id="@+id/action_shopMapFragment_to_shop_graph"
+            app:destination="@id/shop_graph"
+            app:popUpTo="@id/shopMapFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_shopMapFragment_to_shopListFragment"
+            app:destination="@id/shopListFragment"
+            app:popUpTo="@id/shopMapFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/searchDialogFragment"
+        android:name="com.sososhopping.customer.search.view.SearchDialogFragment"
+        android:label="SearchDialogFragment"
+        tools:layout="@layout/search_shop_dialog">
+        <action
+            android:id="@+id/action_searchDialogFragment_to_shopListFragment"
+            app:destination="@id/shopListFragment"
+            app:popUpTo="@id/searchDialogFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_searchDialogFragment_to_shopMapFragment"
+            app:destination="@id/shopMapFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/searchDialogFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="navigateFrom"
+            app:argType="integer" />
+    </dialog>
+
+    <navigation android:id="@+id/shop_graph"
+        app:startDestination="@+id/nav_shop_graph">
+        <include app:graph="@navigation/nav_shop_graph"/>
+
+        <action
+            android:id="@+id/action_global_shopMapFragment"
+            app:destination="@id/shopMapFragment"
+            app:popUpTo="@id/shop_graph"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="storeId"
+            app:argType="long" />
+        <argument
+            android:name="distance"
+            app:argType="float"
+            android:defaultValue="-1"/>
+    </navigation>
+
+    <navigation android:id="@+id/navigation_login"
+        app:startDestination="@id/nav_login_graph">
+        <include app:graph="@navigation/nav_login_graph" />
+    </navigation>
+
+    <dialog
+        android:id="@+id/networkErrorDialog"
+        android:name="com.sososhopping.customer.error.view.NetworkErrorDialog"
+        android:label="NetworkErrorDialog"
+        tools:layout="@layout/error_network_dialog"/>
+
+    <action android:id="@+id/action_global_networkErrorDialog"
+        app:destination="@id/networkErrorDialog"/>
+    <dialog
+        android:id="@+id/logInRequiredDialog"
+        android:name="com.sososhopping.customer.error.view.LogInRequiredDialog"
+        android:label="LogInRequiredDialog"
+        tools:layout="@layout/error_ask_log_in_dialog">
+        <argument
+            android:name="ErrorMsgId"
+            app:argType="integer"
+            android:defaultValue="-1"/>
+    </dialog>
+    <action android:id="@+id/action_global_logInRequiredDialog"
+        app:destination="@id/logInRequiredDialog"/>
+    <action
+        android:id="@+id/action_global_navigation_login"
+        app:destination="@id/navigation_login"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="true" />
+
+    <action android:id="@+id/action_global_home2"
+        app:destination="@id/home2"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/mysosoMainFragment"
+        android:name="com.sososhopping.customer.mysoso.view.MysosoMainFragment"
+        android:label="MysosoMainFragment"
+        tools:layout="@layout/mysoso_main" >
+        <action
+            android:id="@+id/action_mysosoMainFragment_to_mysosoPointFragment"
+            app:destination="@id/mysosoPointFragment" />
+        <action
+            android:id="@+id/action_mysosoMainFragment_to_mysosoReviewFragment"
+            app:destination="@id/mysosoReviewFragment" />
+        <action
+            android:id="@+id/action_mysosoMainFragment_to_mysosoCouponFragment"
+            app:destination="@id/mysosoCouponFragment" />
+        <action
+            android:id="@+id/action_mysosoMainFragment_to_mysosoMyInfoFragment"
+            app:destination="@id/mysosoMyInfoFragment" />
+        <action
+            android:id="@+id/action_mysosoMainFragment_to_mysosoOrderListFragment"
+            app:destination="@id/mysosoOrderListFragment" />
+        <action
+            android:id="@+id/action_mysosoMainFragment_to_mysosoSettingFragment"
+            app:destination="@id/mysosoSettingFragment" />
+        <action
+            android:id="@+id/action_mysosoMainFragment_to_shopMapFragment"
+            app:destination="@id/shopMapFragment"
+            app:popUpTo="@id/mysosoMainFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/mysosoPointFragment"
+        android:name="com.sososhopping.customer.mysoso.view.MysosoPointFragment"
+        android:label="MysosoPointFragment"
+        tools:layout="@layout/mysoso_point">
+        <action
+            android:id="@+id/action_mysosoPointFragment_to_mysosoPointDetailFragment"
+            app:destination="@id/mysosoPointDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mysosoPointDetailFragment"
+        android:name="com.sososhopping.customer.mysoso.view.MysosoPointDetailFragment"
+        android:label="MysosoPointDetailFragment"
+        tools:layout="@layout/mysoso_point_detail">
+        <argument
+            android:name="storeId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_mysosoPointDetailFragment_to_shop_graph"
+            app:destination="@id/shop_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/mysosoReviewFragment"
+        android:name="com.sososhopping.customer.mysoso.view.MysosoReviewFragment"
+        android:label="MysosoReviewFragment"
+        tools:layout="@layout/mysoso_myreview">
+        <action
+            android:id="@+id/action_mysosoReviewFragment_to_shop_graph"
+            app:destination="@id/shop_graph"
+            app:popUpTo="@id/mysosoMainFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/mysosoCouponFragment"
+        android:name="com.sososhopping.customer.mysoso.view.MysosoCouponFragment"
+        android:label="MysosoCouponFragment"
+        tools:layout="@layout/mysoso_coupons"/>
+    <fragment
+        android:id="@+id/mysosoMyInfoFragment"
+        android:name="com.sososhopping.customer.mysoso.view.MysosoMyInfoFragment"
+        android:label="MysosoMyInfoFragment"
+        tools:layout="@layout/mysoso_myinfo"/>
+    <fragment
+        android:id="@+id/cartMainFragment"
+        android:name="com.sososhopping.customer.purchase.view.CartMainFragment"
+        android:label="CartMainFragment"
+        tools:layout="@layout/cart_main">
+        <action
+            android:id="@+id/action_cartMainFragment_to_shop_graph"
+            app:destination="@id/shop_graph" />
+        <action
+            android:id="@+id/action_cartMainFragment_to_purchaseFragment"
+            app:destination="@id/purchaseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/purchaseFragment"
+        android:name="com.sososhopping.customer.purchase.view.PurchaseFragment"
+        android:label="PurchaseFragment"
+        tools:layout="@layout/purchase_main">
+        <argument
+            android:name="purchaseList"
+            app:argType="com.sososhopping.customer.purchase.dto.CartItemDto[]" />
+        <argument
+            android:name="storeId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_purchaseFragment_to_purchaseCouponDialogFragment"
+            app:destination="@id/purchaseCouponDialogFragment" />
+        <action
+            android:id="@+id/action_purchaseFragment_to_purchaseSuccessFragment"
+            app:destination="@id/purchaseSuccessFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <dialog
+        android:id="@+id/purchaseCouponDialogFragment"
+        android:name="com.sososhopping.customer.purchase.view.PurchaseCouponDialogFragment"
+        android:label="PurchaseCouponDialogFragment"
+        tools:layout="@layout/purchase_coupon">
+        <argument
+            android:name="storeId"
+            app:argType="integer" />
+        <argument android:name="currentPrice"
+            app:argType="integer" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/purchaseSuccessFragment"
+        android:name="com.sososhopping.customer.purchase.view.PurchaseSuccessFragment"
+        android:label="PurchaseSuccessFragment"
+        tools:layout="@layout/purchase_success">
+
+        <action
+            android:id="@+id/action_purchaseSuccessFragment_to_shop_graph"
+            app:destination="@id/shop_graph"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="storeId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_purchaseSuccessFragment_to_mysosoOrderListFragment"
+            app:destination="@id/mysosoOrderListFragment"
+            app:popUpTo="@id/purchaseSuccessFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/mysosoOrderListFragment"
+        android:name="com.sososhopping.customer.mysoso.view.MysosoOrderListFragment"
+        android:label="MysosoOrderListMainFragment"
+        tools:layout="@layout/mysoso_order_list">
+        <action
+            android:id="@+id/action_mysosoOrderListMainFragment_to_mysosoOrderDetailFragment"
+            app:destination="@id/mysosoOrderDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mysosoOrderDetailFragment"
+        android:name="com.sososhopping.customer.mysoso.view.MysosoOrderDetailFragment"
+        android:label="MysosoOrderDetailFragment"
+        tools:layout="@layout/mysoso_order_detail">
+        <argument
+            android:name="orderId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_mysosoOrderDetailFragment_to_shop_graph"
+            app:destination="@id/shop_graph" />
+        <action
+            android:id="@+id/action_mysosoOrderDetailFragment_self"
+            app:destination="@id/mysosoOrderDetailFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/mysosoCustomerServiceDialog"
+        android:name="com.sososhopping.customer.mysoso.view.MysosoCustomerServiceDialog"
+        android:label="MysosoCustomerServiceDialog"
+        tools:layout="@layout/mysoso_customerservice_dialog"/>
+    <action android:id="@+id/action_global_mysosoCustomerServiceDialog" app:destination="@id/mysosoCustomerServiceDialog" />
+    <fragment
+        android:id="@+id/mysosoSettingFragment"
+        android:name="com.sososhopping.customer.mysoso.view.MysosoSettingFragment"
+        android:label="MysosoSettingFragment"
+        tools:layout="@layout/mysoso_setting">
+        <action
+            android:id="@+id/action_mysosoSettingFragment_to_mysosoOrderListFragment"
+            app:destination="@id/mysosoOrderListFragment"
+            app:popUpTo="@id/mysosoSettingFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.sososhopping.customer.chat.view.ChatFragment"
+        android:label="ChatFragment"
+        tools:layout="@layout/chat_list">
+        <action
+            android:id="@+id/action_chatFragment_to_conversationFragment"
+            app:destination="@id/conversationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/conversationFragment"
+        android:name="com.sososhopping.customer.chat.view.ConversationFragment"
+        android:label="ConversationFragment"
+        tools:layout="@layout/conversation">
+        <argument
+            android:name="storeName"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="chatroomId"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/roadAddressSearchDialog"
+        android:name="com.sososhopping.customer.mysoso.view.RoadAddressSearchDialog"
+        android:label="RoadAddressSearchDialog"
+        tools:layout="@layout/roadaddress_web_dialog"/>
+
+    <action
+        android:id="@+id/action_global_conversationFragment"
+        app:destination="@id/conversationFragment" /><action android:id="@+id/action_global_roadAddressSearchDialog" app:destination="@id/roadAddressSearchDialog"/>
+
+</navigation>

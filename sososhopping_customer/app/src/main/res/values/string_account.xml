@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 회원가입 -->
+    <string name="signup_email">사용하실 이메일을 입력해주세요</string>
+    <string name="signup_password">사용하실 비밀번호를 입력해주세요</string>
+    <string name="signup_passwordDup">사용하실 비밀번호를 다시 입력해주세요</string>
+    <string name="signup_name">성함을 입력해주세요</string>
+    <string name="signup_phone">휴대전화번호을 입력해주세요 (-제외)</string>
+    <string name="signup_nickName">앱 내에서 사용하실 별명을 입력해주세요</string>
+    <string name="signup_roadAddress">도로명주소</string>
+    <string name="signup_detailAddress">상세주소</string>
+
+    <string name="signup_error_email">이메일을 정확하게 입력해주세요</string>
+    <string name="signup_error_password">비밀번호는 8자 이상이어야 합니다</string>
+    <string name="signup_error_passwordDup">비밀번호가 일치하지 않습니다</string>
+    <string name="signup_error_name">이름은 2글자 이상의 한글만 가능합니다</string>
+    <string name="signup_error_phone">전화번호를 정확하게 입력해주세요</string>
+    <string name="signup_error_nickname">별명은 8자 이내의 한글,영어,숫자만 가능합니다</string>
+    <string name="signup_error_roadAddress">도로명 주소를 입력해주세요</string>
+    <string name="signup_error_detailAddress">상세 주소를 입력해주세요</string>
+    <string name="signup_error_process">모든 절차를 통과하셔야 합니다</string>
+    <string name="signup_success">회원가입이 완료되었습니다!\n로그인을 시도해주세요</string>
+
+    <!-- Strings related to login -->
+    <string name="login_email">이메일을 입력해주세요</string>
+    <string name="login_password">비밀번호를 입력해주세요</string>
+    <string name="login_success">환영합니다</string>
+    <string name="login_failed">올바르지 않은 아이디, 혹은 비밀번호입니다.</string>
+
+    <string name="find_email">가입하신 이메일은 다음과 같습니다</string>
+    <string name="find_error">가입하신 정보를 찾을 수 없습니다</string>
+    <string name="input_error">오류가 발생하였습니다. 다시 시도해주세요</string>
+    <string name="find_infoOk">가입 인증 완료! 비밀번호를 변경해주세요</string>
+
+
+    <string name="find_change_success">비밀번호 변경에 성공하였습니다.</string>
+    <string name="find_change_failed">비밀번호 변경에 실패하였습니다.</string>
+
+</resources>

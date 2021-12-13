@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">소소한장보기</string>
+    <string name="app_name_kor">소 소 한  장 보 기</string>
+    <string name="app_description">간편하게 살펴보는 내 주변 상점</string>
+
+
+    <!--홈 관련-->
+    <string name="home_shop">상점</string>
+    <string name="home_item">상품</string>
+    <string name="textSample">내용을 입력해주세요</string>
+
+
+    <!--매장 관련-->
+    <!--매장 소개-->
+    <string name="introduce_location">매장의 영업위치입니다</string>
+    <string name="introduce_businessTime">매장의 영업시간입니다</string>
+    <string name="introduce_description">매장의 상세 설명입니다</string>
+    <string name="introduce_point">정책이 아직 준비되지 않았습니다.</string>
+    <string name="introduce_button_favorite">관심설정</string>
+    <string name="introduce_button_favorite_not">관심해제</string>
+
+    <!--장바구니-->
+    <string name="item_addCart_succ">장바구니에 담는데 성공하였습니다.</string>
+    <string name="item_addCart_dup">이미 장바구니에 담긴 물건입니다</string>
+    <string name="item_deleteCart_error">장바구니 물건 삭제에 실패했습니다</string>
+
+    <!--이벤트 페이지-->
+    <string name="event_couponList">오늘의 쿠폰</string>
+    <string name="event_coupon_addFail">쿠폰 저장에 실패하였습니다</string>
+    <string name="event_coupon_addSucc">쿠폰 저장에 성공하였습니다</string>
+    <string name="event_coupon_deleteSucc">쿠폰 삭제에 성공하였습니다</string>
+    <string name="event_coupon_deleteFail">쿠폰 삭제에 실패하였습니다. 존재하지 않는 쿠폰입니다.</string>
+    <string name="event_coupon_addDup">이미 저장/사용한 쿠폰입니다</string>
+    <string name="event_coupon_shortLength">올바르지 않은 쿠폰 코드 길이입니다.</string>
+    <string name="event_boardList">소식</string>
+
+    <!--리뷰-->
+    <string name="review_input">리뷰를 작성했습니다</string>
+
+    <!--메뉴 다이얼로그-->
+
+    <!--신고-->
+    <string name="report_title">신고하기</string>
+    <string name="report_warning">신고 내용은 30글자 이상이어야 합니다.</string>
+    <string name="report_input">신고를 작성했습니다.</string>
+    <string name="report_description">불법, 부정, 허위 및 불량 업소 등에 관하여 신고받은 내용은 고객센터에서 면밀히 검토 후 조치합니다.\n금전적인 피해 및 기타 추가적인 증빙사항은 위 고객센터 이메일 (sososhopping2021@gmail.com)로 연락주세요</string>
+
+    <!--My소소-->
+    <string name="mysoso">My소소</string>
+    <string name="mysoso_myInfo">내 정보 보기</string>
+    <string name="mysoso_interest">나의 관심가게</string>
+    <string name="mysoso_chat">채팅목록</string>
+    <string name="mysoso_serviceInfo">고객센터</string>
+    <string name="mysoso_setting">설정</string>
+    <string name="mysoso_shoppingBag">장바구니</string>
+    <string name="mysoso_payHistory">결제내역</string>
+    <string name="mysoso_myRating">내 후기</string>
+    <string name="mysoso_point">포인트</string>
+    <string name="mysoso_coupon">쿠폰</string>
+    <string name="mysoso_map">지도</string>
+
+    <string name="mysoso_point_interest">관심가게</string>
+    <string name="mysoso_point_all">전체</string>
+
+    <!--My소소 포인트-->
+    <string name="mysoso_point_detail">포인트 내역</string>
+
+    <!--리뷰-->
+    <string name="mysoso_myRating_get_error">리뷰를 불러오는데 실패하였습니다</string>
+    <string name="mysoso_myRating_delte_error">리뷰 삭제에 실패하였습니다</string>
+    <string name="mysoso_myRating_delte_success">리뷰 삭제에 성공하였습니다</string>
+
+    <!--내정보-->
+    <string name="email">이메일</string>
+    <string name="password">비밀번호</string>
+    <string name="passwordDup">비밀번호 재확인</string>
+    <string name="name">이름</string>
+    <string name="phone">휴대전화번호 (-제외)</string>
+    <string name="nickName">별명</string>
+    <string name="roadAddress">도로명주소</string>
+    <string name="detailAddress">상세주소</string>
+    <string name="mysoso_myInfo_editSuccess">내정보 수정에 성공하였습니다. 다시 로그인해 주세요</string>
+
+    <!--세팅-->
+    <string name="setting">설정</string>
+    <string name="setting_chat">채팅 알림</string>
+    <string name="setting_event">이벤트 알림</string>
+    <string name="setting_quit">회원탈퇴</string>
+    <string name="setting_deleteData">데이터 삭제</string>
+    <string name="setting_logout">로그아웃</string>
+
+    <string name="setting_logout_ask">정말 로그아웃 하시겠습니까?</string>
+    <string name="setting_logout_failed">로그아웃에 실패하였습니다</string>
+    <string name="setting_logout_success">성공적으로 로그아웃하였습니다</string>
+</resources>

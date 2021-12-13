@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="icon_map_explain">지도</string>
+    <string name="icon_list">목록</string>
+
+    <string name="nav_interest">관심가게</string>
+    <string name="nav_chat">채팅</string>
+    <string name="nav_home">홈</string>
+    <string name="nav_cart">장바구니</string>
+    <string name="nav_my">My소소</string>
+    <string name="nav_search">검색</string>
+    <string name="nav_call">전화</string>
+    <string name="nav_report">신고</string>
+
+    <string name="shop_info">소개</string>
+    <string name="shop_item">상품</string>
+    <string name="shop_event">이벤트</string>
+    <string name="shop_review">후기</string>
+
+
+</resources>
